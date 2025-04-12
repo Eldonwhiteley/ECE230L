@@ -9,6 +9,7 @@ module onehot (
     wire A, B, C, D, E;
       
      dff Adff(
+         .reset(reset),
         .Default(1'b1),
         .D(A_next),
         .clk(clock),
@@ -16,6 +17,7 @@ module onehot (
      );
      
      dff Bdff(
+         .reset(reset),
         .Default(1'b0),
         .D(B_next),
         .clk(clock),
@@ -23,6 +25,7 @@ module onehot (
      );
      
      dff Cdff(
+         .reset(reset),
         .Default(1'b0),
         .D(C_next),
         .clk(clock),
@@ -30,6 +33,7 @@ module onehot (
      );
      
      dff Ddff(
+         .reset(reset),
         .Default(1'b0),
         .D(D_next),
         .clk(clock),
@@ -37,6 +41,7 @@ module onehot (
      );
      
      dff Edff(
+         .reset(reset),
         .Default(1'b0),
         .D(E_next),
         .clk(clock),
